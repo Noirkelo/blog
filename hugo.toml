@@ -1,0 +1,50 @@
+baseURL = "https://noirkelo.github.io/blog/"
+theme = "hugo-simple"
+languageCode = "zh-Hans" # en
+title = "Noirkel 's blog"
+enableRobotsTXT = true
+tableOfContents = true
+
+disableKinds = ["taxonomy"]
+[permalinks]
+  blog = "/:slugorfilename/"
+  tags = "/blog/:slug/"
+  
+  
+ 
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+  [markup.goldmark.renderer]
+    unsafe= true
+  [markup.highlight]
+    # lineNos = true
+    # lineNumbersInTable = false
+    noClasses = false
+[params]
+  description = "Noirkelo的博客"
+  favicon = "images/favicon.png"
+  dateFormat = "2006-01-02"
+  hideMadeWithLine = false
+  [params.author]
+    name = ""
+    email = ""
+
+[menu]
+  [[menu.main]]
+      name = 'Home'
+      pageRef = '/'
+      weight = 10
+  [[menu.main]]
+      name = 'Box'
+      pageRef = '/box'
+      weight = 20
+
+[services]
+  [services.rss]
+    limit = 42
+
+[outputs]
+  # Disable section RSS
+  section = ['html']
