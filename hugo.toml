@@ -21,7 +21,7 @@ disableKinds = ["taxonomy"]
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
-    noClasses = false
+    # noClasses = false
 [params]
   description = "Noirkelo的博客"
   favicon = "images/favicon.png"
