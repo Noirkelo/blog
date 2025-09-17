@@ -19,8 +19,8 @@ disableKinds = ["taxonomy"]
   [markup.goldmark.renderer]
     unsafe= true
   [markup.highlight]
-    # lineNos = true
-    # lineNumbersInTable = false
+    lineNos = true
+    lineNumbersInTable = false
     noClasses = false
 [params]
   description = "Noirkelo的博客"
