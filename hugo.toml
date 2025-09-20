@@ -4,7 +4,6 @@ languageCode = "zh-Hans" # en
 title = "Noirkel 's blog"
 enableRobotsTXT = true
 tableOfContents = true
-
 disableKinds = ["taxonomy"]
 [permalinks]
   blog = "/:slugorfilename/"
@@ -13,6 +12,13 @@ disableKinds = ["taxonomy"]
   
  
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
@@ -27,6 +33,7 @@ disableKinds = ["taxonomy"]
   favicon = "images/favicon.png"
   dateFormat = "2006-01-02"
   hideMadeWithLine = false
+  math=true
   [params.author]
     name = ""
     email = ""
